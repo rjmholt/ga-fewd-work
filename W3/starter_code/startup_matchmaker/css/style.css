@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700italic');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
 /* ---- PAGE DEFAULTS ---- */
 body {
-    font-family: helvetica, sans-serif;
+    font-family: 'Open Sans', helvetica, sans-serif;
     margin: 0 auto;
 }
 
@@ -16,6 +21,8 @@ header {
 
 header h1 {
     padding-left: 30px;
+    font-family: 'Droid Serif', serif;
+    font-weight: 700;
 }
 
 header a {
@@ -25,21 +32,25 @@ header a {
 
 header ul {
     float: right;
-    padding-right: 10%;
+    padding-right: 5%;
 }
 
 header li {
     padding-left: 30px;
     display: inline;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 header .headFind {
     font-family: fantasy;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
 }
 
 header .headInfo {
-    font-family: helvetica, sans-serif;
+    font-family: 'Open Sans', helvetica, sans-serif;
+    font-weight: 600;
 }
 
 /* ---- SLOGAN BAR ---- */
@@ -48,6 +59,8 @@ header .headInfo {
     background-color: #C0C0C0;
     border-top: 5px solid #ffff00;
     font-size: 27px;
+    font-family: 'Droid Serif', serif;
+    font-weight: 700;
     font-style: italic;
     height: 100px;
 }
@@ -75,19 +88,24 @@ header .headInfo {
 }
 
 .createProfile {
-    text-align: center;
+    text-align: left;
     background-color: rgba(255,255,255,0.6);
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
-    width: 25%;
-    height: 60%;
+    width: 35%;
+    height: 80%;
     float: right;
     margin-right: 10%;
+    padding: 20px 35px;
     position: relative;
+}
+
+.createProfile h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
 }
 
 .createProfile p {
     text-align: justify;
-    padding: 0 10px;
 }
 
 .createProfile [type=button] {
@@ -102,6 +120,9 @@ header .headInfo {
     bottom: 15px;
     right: 10px;
     left: 10px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
 }
 
 /* ---- USER DIRECTED LINKS ---- */
@@ -113,10 +134,16 @@ header .headInfo {
 }
 
 .useCaseColumn {
-    padding-left: 6%;
-    padding-right: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
     float: left;
     width: 25%;
+    font-size: 16px;
+}
+
+.useCaseColumn h3 {
+    font-family: 'Droid Serif', serif;
+    font-size: 20px;
 }
 
 .useCaseColumn+.useCaseColumn {
@@ -130,6 +157,9 @@ header .headInfo {
     border-radius: 5px;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.75);
     color: #000;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
 }
 
 /* ---- FOOTER ---- */
