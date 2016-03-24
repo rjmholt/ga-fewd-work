@@ -1,0 +1,141 @@
+/* ---- PAGE DEFAULTS ---- */
+body {
+    font-family: helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+/* ---- HEADER STYLES ---- */
+
+header {
+    color: #FFFF00;
+    background: #000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 150px;
+}
+
+header h1 {
+    padding-left: 30px;
+}
+
+header a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+header ul {
+    float: right;
+    padding-right: 10%;
+}
+
+header li {
+    padding-left: 30px;
+    display: inline;
+    font-size: 20px;
+}
+
+header .headFind {
+    font-family: fantasy;
+}
+
+header .headInfo {
+    font-family: helvetica, sans-serif;
+}
+
+/* ---- SLOGAN BAR ---- */
+.slogan {
+    margin: 0 0;
+    background-color: #C0C0C0;
+    border-top: 5px solid #ffff00;
+    font-size: 27px;
+    font-style: italic;
+    height: 100px;
+}
+
+.slogan p {
+    text-align: center;
+}
+
+.slogan .taste {
+    text-decoration: line-through;
+    color: #A0A0A0;
+}
+
+.slogan .are {
+    border-bottom: #ffff00 solid 2px;
+}
+
+/* ---- MAIN BODY ---- */
+.mainBody {
+    margin: 0 auto;
+    height: 500px;
+    background: url(../images/coworking.jpg) no-repeat center top rgb(0,0,0);
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.createProfile {
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+    width: 25%;
+    height: 60%;
+    float: right;
+    margin-right: 10%;
+    position: relative;
+}
+
+.createProfile p {
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.createProfile [type=button] {
+    margin: 0 auto;
+    color: #000;
+    border: 1px solid #ffff00;
+    background-color: #ffff00;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.75);
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    left: 10px;
+}
+
+/* ---- USER DIRECTED LINKS ---- */
+.useCaseContainer {
+    padding-top: 10px;
+    padding-left: 5%;
+    margin: 0 auto;
+    height: 250px;
+}
+
+.useCaseColumn {
+    padding-left: 6%;
+    padding-right: 1%;
+    float: left;
+    width: 25%;
+}
+
+.useCaseColumn+.useCaseColumn {
+    border-left: 1px solid #c0c0c0;
+}
+
+.useCaseColumn [type=button] {
+    padding: 5px;
+    background-color: #C0C0C0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.75);
+    color: #000;
+}
+
+/* ---- FOOTER ---- */
+footer {
+    background-color: #000;
+    color: #fff;
+    height: 50px;
+    padding: 15px 0 0 30px;
+}
