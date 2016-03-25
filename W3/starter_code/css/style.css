@@ -1,0 +1,135 @@
+/*
+Project Name: Relaxr W3
+Client: Relaxr
+Author: Robert Holt
+*/
+
+@import url('https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:300,300italic,600,800');
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+     background-color: #f0efef;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+#container {
+  width: 960px;
+  margin: auto 0;
+}
+
+header {
+    background-color: #033048;
+    color: #f9e42e;
+    padding-bottom: 40px;
+}
+
+header h1 {
+    font-size: 46px;
+    padding-left: 20px;
+}
+
+header h2 {
+    font-size: 32px;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+#sideBar {
+    width: 240px;
+    height: 1000px;
+}
+
+nav {
+    font-weight: 600;
+}
+
+nav h2 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+nav .category {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+#mainBody {
+    width: 700px;
+    height: 1000px;
+}
+
+article h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+article p {
+    font-size: 24px;
+    font-weight 300;
+}
+
+#footBanner {
+    height: 20px;
+}
+
+footer {
+    background-color: #121212;
+    padding: 10px 0 10px 10%;
+    color: #fff;
+    text-align: left;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+
