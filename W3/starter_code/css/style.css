@@ -46,11 +46,11 @@ Author: Robert Holt
 /*******************************************/
 
 body {
-     color: #000;
-     font-size: 12px;
-     line-height: 1.4;
-     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-     background-color: #f0efef;
+    color: #000;
+    font-size: 12px;
+    line-height: 1.4;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background-color: #f0efef;
 }
 
 
@@ -60,49 +60,61 @@ body {
 
 /* Center the container */
 #container {
+  margin: 5% auto;
   width: 960px;
-  margin: auto 0;
+  overflow: hidden;
+  position: relative;
+  color: #033048;
 }
 
 header {
     background-color: #033048;
-    color: #f9e42e;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
+    height: 100px;
+    position: relative;
 }
 
 header h1 {
     font-size: 46px;
-    padding-left: 20px;
-}
-
-header h2 {
-    font-size: 32px;
-    padding-top: 10px;
-    padding-left: 40px;
-}
-
-#sideBar {
-    width: 240px;
-    height: 1000px;
-}
-
-nav {
-    font-weight: 600;
-}
-
-nav h2 {
-    font-size: 32px;
     font-weight: 800;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
 }
 
-nav .category {
-    font-size: 24px;
-    font-weight: 300;
+header ul {
+    font-size: 26px;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
+}
+
+header li {
+    display: inline;
+    padding: 2%;
+}
+
+header a {
+    text-decoration: none;
+    color: #f9e42e;
 }
 
 #mainBody {
+    float: left;
     width: 700px;
-    height: 1000px;
+    margin-right: 30px;
+}
+
+article {
+    width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #033048;
+    overflow: hidden;
 }
 
 article h2 {
@@ -110,26 +122,135 @@ article h2 {
     font-weight: 600;
 }
 
+article img {
+    padding: 20px 0;
+}
+
 article p {
     font-size: 24px;
-    font-weight 300;
+    font-weight: 300;
+    color: #606161;
+}
+
+article p:first-letter {
+    float: left;
+    font-weight: 800;
+    font-size: 400%;
+}
+
+.readMore {
+    float: right;
+    text-decoration: none;
+    color: #033048;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+#sideBar {
+    float: right;
+    width: 240px;
+    height: 1000px;
+    overflow: hidden;
+}
+
+#sidebar {
+    width: 100%;
+    font-weight: 600;
+}
+
+#sidebar h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    margin-bottom: 20px;
+}
+
+#categories .category {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+#categories a {
+    text-decoration: none;
+    color: #033048;
+}
+
+#aboutRelaxr p {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+#aboutRelaxr a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    color: #033048;
+}
+
+#adUnit {
+    border: 5px solid #000;
+    background-color: #fff;
+    height: 400px;
+    width: auto;
 }
 
 #footBanner {
     height: 20px;
+    width: 100%
 }
 
 footer {
     background-color: #121212;
-    padding: 10px 0 10px 10%;
+}
+
+#logo {
+    text-align: center;
+    color: #f9e42e;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 10px 0;
+}
+
+#signup {
+    background-color: #f9e42e;
+    height: 50px;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+}
+
+#signup [type=button] {
+    background-color: #033048;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
     color: #fff;
-    text-align: left;
+}
+
+#socialMedia {
+    width: 10%;
+    text-align: center;
+    margin: auto;
+    padding: 10px 0;
+}
+
+footer a+a {
+    margin-left: 40px;
+}
+
+#twitter {
+    width: 25px;
+    height: auto;
+}
+
+#facebook {
+    width: 10px;
+    height: auto;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-
-
-
-
