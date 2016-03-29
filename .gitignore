@@ -1,5 +1,6 @@
 *.pdf
 *.zip
+*.doc{,x}
 rob.html
 W1
 W2
