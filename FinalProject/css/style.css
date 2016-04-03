@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+}
+
+pre {
+    display: table;
+    margin: 0 auto;
+    font-size: 20px;
+}

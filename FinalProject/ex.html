@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./styles/zenburn.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Code Test</title>
+</head>
+<body>
+  <pre><code class="ocaml">
+let rec string_of_expr expr =
+  match expr with
+  | EBool e -> string_of_bool e
+  | EInt e -> string_of_int e
+  | Ebinop (l, op, r) ->
+      String.concat " "
+        [string_of_expr l; string_of_op op; string_of_expr r]
+  </code></pre>
+  
+  <script src="./js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+    "browser": true,
+    "jquery": true,
+
+    "es5": true
+}
