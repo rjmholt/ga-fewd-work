@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    background-color: #5F9F9F;
+    font-family: sans-serif;
+    color: #383838;
+}
+
+main {
+    background-color: #fff;
+    width: 30%;
+    margin: 40px auto 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#btc {
+    width: 100%;
+    padding-top: 20px;
+}

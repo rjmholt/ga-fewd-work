@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BitCoin Test Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h1>
+      BitCoin Current Price
+    </h1>
+    <select id="btcCurrency" name="currency">
+      <option value="AUD" select>AUD</option>
+      <option value="USD">USD</option>
+      <option value="GBP">GBP</option>
+    </select>
+    <input type="submit" value="Select" id="btcButton">
+    <div id="btc">
+    </div>
+  </main>
+
+  <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
+  </script>
+  <script src="js/btc.js"></script>
+</body>
+</html>
