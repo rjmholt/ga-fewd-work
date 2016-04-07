@@ -1,0 +1,90 @@
+<div class="file">
+    <div class="file-header">
+        <div id="readme" class="readme blob instapaper_body">
+            <article class="markdown-body entry-content" itemprop="text">
+                <h1><a id="user-content-fewd-week-5-more-javascript" class="anchor" href="#fewd-week-5-more-javascript" aria-hidden="true"></a>FEWD Week #5: More JavaScript</h1>
+                <hr>
+                <h3><a id="user-content-description" class="anchor" href="#description" aria-hidden="true"></a>Description</h3>
+                <p>JavaScript is powerful: we're able to take user interaction and information and use it to update the page without requiring a refresh.</p>
+                <p> This week, a new startup in your city, CitiPix, is looking to create a personalized picture app that allows users to store pictures they've taken around the world and quickly access them by typing in keywords or tags associated with each photo; they have asked for your help to start building the front-end prototype. </p>
+                <p>You will begin by building a web-app that will take a user's input and update the background image of the page based on that input. Once again, you have been given the starter code that includes the HTML and the CSS. Use the images in the <a href="../images">images folder</a> and write JavaScript to make the background image reflect user input based on the Technical Requirements below.</p>
+                <p>
+                    <br>
+                </p>
+                <hr>
+                <h3><a id="user-content-real-world-applications" class="anchor" href="#real-world-applications" aria-hidden="true"></a>Real-World Applications</h3>
+                <ul>
+                    <li>Write pseudocode before coding to demonstrate understanding of interactive programming theory and focus on the logic without being distracted by details of syntax</li>
+                    <li>Write JavaScript code that will update a web-page based on user interaction</li>
+                    <li>Store user-submitted information in variables to be used throughout an application</li>
+                    <li>Change DOM elements on the page based on user input</li>
+                    <li>Specify the order in which your application runs using control flow</li>
+                    <li>Revisit applications and code you've written to find solutions to problems you've already solved</li>
+                </ul>
+                <p>
+                    <br>
+                </p>
+                <hr>
+                <h3><a id="user-content-technical-requirements" class="anchor" href="#technical-requirements" aria-hidden="true"></a>Technical Requirements</h3>
+                <ul>
+                    <li>Call <code>$.val()</code> on inputs to get the string value of your user's input</li>
+                    <li>Store user input in <code>var city</code></li>
+                    <li>Use $.on(submit) or <code>$.click</code> to figure out when the user clicks the "submit" button</li>
+                    <li>Create <code>if / else if / else</code> conditionals to control the flow of your application</li>
+                    <li>Write at least six different lines of pseudocode and display them inline as JavaScript comments</li>
+                    <li>Prevent a form submission using the <code>event.preventDefault()</code> function</li>
+                    <li>Use the <code>$.ready()</code> handler to delay your code from executing until all DOM assets have been loaded</li>
+                    <li>Get the first element from an attribute name using <code>$.attr()</code></li>
+                    <li>Use the <code>||</code> operator in your conditionals to allow for multiple string values to execute <code>if/else if</code> statement code</li>
+                    <li>
+                        <p>If a user submits:</p>
+                        <ul>
+                            <li>"New York" or "New York City" or "NYC" make the background of the page nyc.jpg</li>
+                            <li>"San Francisco" or "SF" or "Bay Area" make the background of the page sf.jpg</li>
+                            <li>"Los Angeles" or "LA" or "LAX" make the background of the page la.jpg</li>
+                            <li>"Austin" or "ATX" make the background of the page austin.jpg</li>
+                            <li>"Sydney" or "SYD" make the background of the page sydney.jpg</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Take a look at what your final product should look like before and after:</p>
+                <p>
+                    <a href="images/citipix_solution.png" target="_blank"><img src="images/citipix_solution.png" alt="Deliverable" style="max-width:100%;"></a>
+                </p>
+                <p>After entering "NYC" and submitting:</p>
+                <p>
+                    <a href="images/citipix_solution_nyc.png" target="_blank"><img src="images/citipix_solution_nyc.png" alt="Deliverable" style="max-width:100%;"></a>
+                </p>
+                <h4><a id="user-content-bonus" class="anchor" href="#bonus" aria-hidden="true"></a>Bonus</h4>
+                <ul>
+                    <li>Remove extra spaces or new lines that users or the browser might add before or after their input </li>
+                    <li>Reset the user input field after it is submitted</li>
+                </ul>
+                <p>NOTE: You will have to add these images to your <code>/images</code> folder</p>
+                <p>
+                    <br>
+                </p>
+                <hr>
+                <h3><a id="user-content-resources" class="anchor" href="#resources" aria-hidden="true"></a>Resources</h3>
+                <ul>
+                    <li><a href="../">Starter Code and Assets</a></li>
+                    <li><a href="http://www.w3schools.com/js/js_comparisons.asp">JavaScript docs on comparison operators</a></li>
+                    <li><a href="http://www.w3schools.com/js/js_variables.asp">JavaScript docs on variables</a></li>
+                </ul>
+                <p>
+                    <br>
+                </p>
+                <hr>
+                <h3><a id="user-content-evaluation--submission" class="anchor" href="#evaluation--submission" aria-hidden="true"></a>Evaluation / Submission</h3>
+                <p>Students should start by using the <a href="../">starter code</a> and focus on adding the proper JavaScript to update the background of the page.
+                    <br/>
+                    <br/> Students will create a new repository on GitHub called "homework-city" and push their code to it when they are ready to submit. Instructional team should evaluate against the solution code and the student's fulfillment of technical requirements. Instructional team will provide a numeric grade on a scale for each technical requirement: does not meet expectations (0); meets expectations (1); exceeds expectations (2).
+                    <br/>
+                    <br/><strong>Note</strong>: If bullet points have child bullets, grade the child bullets and not the parent bullet belonging to the child. The maximum possible score on this assignment is 28/28. Bonus materials are completely optional.</p>
+                <h3><a id="user-content-final-project-milestone-1" class="anchor" href="#final-project-milestone-1" aria-hidden="true"></a>Final Project Milestone 1</h3>
+                <p>By week 5, you should have submitted a proposal and wireframes for your final project. Next up, you'll be writing pseudo code for the interactivity you would like to add.
+                    <br/>
+                    <br/>For this week, you should begin writing psuedo code and a draft of the HTML/CSS for your application - this should be turned into your instructor by the end of week 7.</p>
+            </article>
+        </div>
+    </div>
