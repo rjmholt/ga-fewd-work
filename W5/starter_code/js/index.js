@@ -24,7 +24,6 @@ $(document).ready(function () {
         // Get the text in the text input element
         var cityText = $('#city-type').val();
 
-        var imgSrcPath;
         // If the user enters a name for Sydney,
         // change the background image to Sydney
         if (RE_SYD.test(cityText)) {
