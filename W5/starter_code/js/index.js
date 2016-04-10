@@ -1,6 +1,6 @@
 // Regexes for city names
 var RE_SYD  = /^(SYD|[sS]yd(?:ney)?)$/;
-var RE_NYC  = /^(?:NYC|nyc|[nN]ew [yY]ork ([cC]ity)?)$/;
+var RE_NYC  = /^(?:NYC|nyc|[nN]ew [yY]ork( [cC]ity)?)$/;
 var RE_SF   = /^(?:sf|[sS]an [fF]ran(?:cisco)?|[bB]ay [aA]rea)$/;
 var RE_AUST = /^([aA]ustin|atx|ATX)$/;
 var RE_LA   = /^(?:lax?|LAX?|[lL]os [aA]ngeles)$/;
