@@ -1,11 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 body {
     margin: 0;
-    font-family: helvetica, sans-serif;
-}
-
-#pageHead {
-  margin: auto;
-  text-align: center;
+    font-family: 'Lato', helvetica, sans-serif;
 }
 
 #banner {
@@ -20,14 +17,15 @@ body {
   -o-background-size: cover;
   background-size: cover;
   z-index: -1;
+  margin-bottom: -30%;
 }
 
 #titlePic {
-  margin: -5% auto 10% auto;
+  margin: 0 auto 0 auto;
 }
 
 #personalPic {
-  margin: 0 auto;
+  margin: 25% auto 0 auto;
   width: 100px;
   height: 100px;
   background: #fff;
@@ -43,6 +41,12 @@ body {
   width: 100%;
 }
 
+#pageHead {
+  margin: 0 auto 0 auto;
+  min-height: 100px;
+  text-align: center;
+}
+
 #pageBody {
   margin: auto 0;
   width: 70%;
@@ -51,7 +55,7 @@ body {
 /* ---- Nav Menu CSS ---- */
 #navMenu {
   float: left;
-  margin: -15% 20% 0 10%;
+  margin: 0 20% 0 10%;
 }
 
 #navMenu li {
@@ -68,6 +72,7 @@ body {
   color: #000;
 }
 
+/* Set the current page as italic in the nav menu */
 #index .index a {
   text-decoration: none;
   font-style: italic;
@@ -94,10 +99,33 @@ body {
 }
 /* ---- End Nav Menu CSS ---- */
 
+#aboutMeHead {
+  margin: 5% auto 0 auto;
+  text-align: center;
+  width: 50%;
+}
+
+#aboutMeHead h1 {
+  float: left;
+  margin: 5% 0 0 15%;
+}
+
+#aboutMeImgContainer {
+  width: 15%;
+  float: left;
+  margin-left: 30%;
+}
+
+#aboutMeImgContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 25px;
+}
+
 #mainContainer {
   float: left;
   margin: 0 auto;
-  padding: 0 10% 200px 10%;
+  padding: 5% 10% 200px 10%;
 }
 
 pre {

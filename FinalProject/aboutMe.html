@@ -2,9 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>About Me</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js">
+  </script> 
+  <script>
+    $(function() {
+      $('#navMenu').load('nav.html');
+    });
+  </script>
 </head>
 <body id="aboutMe">
-  
+  <div id="aboutMeHead">
+    <header>
+      <h1>About Me</h1>
+      <div id="aboutMeImgContainer">
+        <img src="./img/me.png" alt="Image of me" id="aboutMeImg">
+      </div>
+    </header>
+  </div>
+  <div id="pageBody">
+    <div id="navMenu"></div>
+    <div id="mainContainer">
+      <div id="intro">
+        <p>I'm a Software Engineer living in Melbourne</p>
+      </div>
+      <div id="interests">
+        <h2>Interests</h2>
+        <p></p>
+        <ul>
+          <li>Thing 1</li>
+          <li>Thing 2</li>
+          <li>Thing 3</li>
+          <li>Thing 4</li>
+          <li>Thing 5</li>
+        </ul>
+      </div>
+      <div id="currentProjects">
+        <h2>Current Projects</h2>
+        <ul>
+          <li>X1</li>
+          <li>X2</li>
+          <li>X3</li>
+          <li>X4</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
