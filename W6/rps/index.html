@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Simulator 5000</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="container">
+  <main>
+    <h1>Rock Paper Scissors Simulator 5000</h1>
+
+    <div id="opponent">
+      <h3>Choose your opponent:</h3>
+        <input id="human" type="submit" value="Human">
+        <input id="ai" type="submit" value="AI">
+    </div>
+    <div id="p1" class="hide">
+      <h3>Player 1's turn:</h3>
+      <input id="rock1" type="submit" value="Rock">
+      <input id="paper1" type="submit" value="Paper">
+      <input id="scissors1" type="submit" value="Scissors">
+    </div>
+    <div id="p2" class="hide">
+      <h3>Player 2's turn</h3>
+      <input id="rock2" type="submit" value="Rock">
+      <input id="paper2" type="submit" value="Paper">
+      <input id="scissors2" type="submit" value="Scissors">
+    </div>
+    <div>
+      <div id="result">
+      </div>
+      <div>
+        <table id="scoreTable">
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="playAgain" class="hide">
+      <h3>Play again?</h3>
+      <input id="replay" type="submit" value="Yes">
+    </div>
+  </main>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

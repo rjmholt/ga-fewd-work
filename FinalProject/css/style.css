@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: helvetica, sans-serif;
 }
 
 #pageHead {
@@ -9,8 +10,11 @@ body {
 
 #banner {
   width: 100%;
-  height: 300px;
-  background: url(../img/grass-field-1.jpg) no-repeat center center fixed;
+  height: 400px;
+  background-image: url(../img/perfect_mountains.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center-bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -25,10 +29,14 @@ body {
 #personalPic {
   margin: 0 auto;
   width: 100px;
+  height: 100px;
   background: #fff;
   padding: 10px;
-  border-radius: 10px;
-  border: thick solid #000;
+  border-radius: 40px;
+  border: 3px solid #fff;
+  box-shadow: rgba(0,0,0,0.3) 0 1px 1px 0;
+  background: url(../img/me.png);
+  background-size: contain;
 }
 
 #personalPic img {
@@ -40,22 +48,56 @@ body {
   width: 70%;
 }
 
+/* ---- Nav Menu CSS ---- */
 #navMenu {
   float: left;
-  margin: 0 20% 0 10%;
+  margin: -15% 20% 0 10%;
 }
 
 #navMenu li {
   list-style-type: none;
 }
 
-#navMenu a {
-  text-decoration: none;
+#navMenu li~li {
+  margin-top: 10px;
 }
+
+#navMenu a {
+  font-weight: 800;
+  text-decoration: underline;
+  color: #000;
+}
+
+#index .index a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+#aboutMe .aboutMe a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+#contact .contact a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+#posts .posts a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+#demos .demos a {
+  text-decoration: none;
+  font-style: italic;
+}
+/* ---- End Nav Menu CSS ---- */
 
 #mainContainer {
   float: left;
   margin: 0 auto;
+  padding: 0 10% 200px 10%;
 }
 
 pre {

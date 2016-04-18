@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+#container {
+  width: 60%;
+  margin: auto;
+}
+
+h1,h3 {
+  text-align: center;
+}
+
+#opponent, #p1, #p2, #result, #playAgain {
+  text-align: center;
+}
+
+table {
+  text-align: center;
+  margin: 30px auto 0 auto;
+}
+
+.hide {
+  display: none;
+}
