@@ -111,7 +111,7 @@ body {
 }
 
 #aboutMeImgContainer {
-  width: 15%;
+  width: 100px;
   float: left;
   margin-left: 30%;
 }

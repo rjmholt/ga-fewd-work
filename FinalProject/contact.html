@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/highlight/zenburn.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js">
+  </script> 
+  <script>
+    $(function() {
+      $('#navMenu').load('nav.html');
+      $('.haskell').load('contact.hs');
+    });
+  </script>
+  <title>Contact Me</title>
 </head>
 <body id="contact">
-  
+  <header>
+    <h1>Contact Me</h1>
+  </header>
+  <div id="navMenu"></div>
+  <main>
+    <div id="contactCode">
+      <h2>
+        <pre><code class="haskell">
+        </code></pre>
+      </h2>
+    </div>
+    <div id="socialMediaContact"></div>
+  </main>
+  <script src="js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

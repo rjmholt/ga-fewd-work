@@ -29,23 +29,46 @@
       </div>
       <div id="interests">
         <h2>Interests</h2>
-        <p></p>
+        <p>My current interests are:</p>
         <ul>
-          <li>Thing 1</li>
-          <li>Thing 2</li>
-          <li>Thing 3</li>
-          <li>Thing 4</li>
-          <li>Thing 5</li>
+          <li>Functional Programming</li>
+          <li>Distributed Systems</li>
+          <li>Programming Languages</li>
+          <li>Operating Systems</li>
         </ul>
       </div>
       <div id="currentProjects">
         <h2>Current Projects</h2>
-        <ul>
-          <li>X1</li>
-          <li>X2</li>
-          <li>X3</li>
-          <li>X4</li>
-        </ul>
+        <div id="currentProjects">
+          <div class="currProj">
+            <h3>Toy Compiler</h3>
+            <p>
+              A compiler for a toy language (called Bean) implemented in
+              OCaml, targeting the Oz virtual machine from the University
+              of Melbourne. Eventually, I'm hoping to build on this project
+              to create a more serious compiler in Haskell, targeting a real
+              world architecture like ARM, MIPS or x86_64.
+            </p>
+          </div>
+          <div class="currProj">
+            <h3>Chat Server</h3>
+            <p>
+              A chat server with rooms with a JSON protocol, implemented in
+              Erlang, following OTC principles. I'm aiming to extend this over
+              time to add TLS support, authentication, peristence and
+              replacing rooms with subscribed groups.
+            </p>
+          </div>
+          <div class="currProj">
+            <h3>MIPS emulator</h3>
+            <p>
+              A simple toy disassembler, and then emulator, for the MIPS
+              architecture, which takes raw MIPS machine code and can both
+              construct a disassembled representation, and emulate its
+              execution.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
