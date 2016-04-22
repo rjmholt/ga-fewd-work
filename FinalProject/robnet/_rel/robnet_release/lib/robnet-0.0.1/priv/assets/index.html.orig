@@ -1,0 +1,47 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js">
+  </script> 
+  <script>
+    $(function() {
+      $('#navMenu').load('nav.html');
+    });
+  </script>
+  <title>Home</title>
+</head>
+<body id="index">
+  <div id="pageHead">
+    <header>
+      <div id="banner">
+      </div>
+      <div id="titlePic">
+        <div id="personalPic">
+        </div>
+        <div id="intro">
+          <h1>Rob Holt</h1>
+          <h2></h2>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div id="pageBody">
+    <div id="navMenu"></div>
+    <div id="mainContainer">
+      <main>
+        <div id="blurb">
+          <p>Hi, my name's Rob</p>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
+=======
+this is a test file
+pls ignore this....
+>>>>>>> 914b7721aa4778b888593962bab2c0c0c0d91b61

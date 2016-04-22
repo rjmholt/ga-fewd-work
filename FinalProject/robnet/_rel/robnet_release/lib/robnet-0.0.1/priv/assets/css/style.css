@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body {
+    margin: 0;
+    font-family: 'Lato', helvetica, sans-serif;
+}
+
+#banner {
+  width: 100%;
+  height: 400px;
+  background-image: url(../img/perfect_mountains.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center-bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -1;
+  margin-bottom: -30%;
+}
+
+#titlePic {
+  margin: 0 auto 0 auto;
+}
+
+#personalPic {
+  margin: 25% auto 0 auto;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 40px;
+  border: 3px solid #fff;
+  box-shadow: rgba(0,0,0,0.3) 0 1px 1px 0;
+  background: url(../img/me.png);
+  background-size: contain;
+}
+
+#personalPic img {
+  width: 100%;
+}
+
+#pageHead {
+  margin: 0 auto 0 auto;
+  min-height: 100px;
+  text-align: center;
+}
+
+#pageBody {
+  margin: auto 0;
+  width: 70%;
+}
+
+/* ---- Nav Menu CSS ---- */
+#navMenu {
+  float: left;
+  margin: 0 20% 0 10%;
+}
+
+#navMenu li {
+  list-style-type: none;
+}
+
+#navMenu li~li {
+  margin-top: 10px;
+}
+
+#navMenu a {
+  font-weight: 800;
+  text-decoration: underline;
+  color: #000;
+}
+
+/* Set the current page as italic in the nav menu */
+#index .index a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+#aboutMe .aboutMe a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+#contact .contact a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+#posts .posts a {
+  text-decoration: none;
+  font-style: italic;
+}
+
+#demos .demos a {
+  text-decoration: none;
+  font-style: italic;
+}
+/* ---- End Nav Menu CSS ---- */
+
+#aboutMeHead {
+  margin: 5% auto 0 auto;
+  text-align: center;
+  width: 50%;
+}
+
+#aboutMeHead h1 {
+  float: left;
+  margin: 5% 0 0 15%;
+}
+
+#aboutMeImgContainer {
+  width: 100px;
+  float: left;
+  margin-left: 30%;
+}
+
+#aboutMeImgContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 25px;
+}
+
+#mainContainer {
+  float: left;
+  margin: 0 auto;
+  padding: 5% 10% 200px 10%;
+}
+
+pre {
+    display: table;
+    margin: 0 auto;
+    font-size: 20px;
+}
