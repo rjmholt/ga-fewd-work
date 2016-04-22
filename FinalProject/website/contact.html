@@ -9,7 +9,6 @@
   <script>
     $(function() {
       $('#navMenu').load('nav.html');
-      $('.haskell').load('contact.hs');
     });
   </script>
   <title>Contact Me</title>
@@ -22,7 +21,18 @@
   <main>
     <div id="contactCode">
       <h2>
-        <pre><code class="haskell">
+        <pre><code class="python3">
+from base64 import b64decode
+
+x = b64decode(b'O1E8VDtXI2MEaQhhDSNAL0I=')
+k = 0x49
+a = []
+for b in x:
+    r = b ^ k
+    a.append(r)
+    k ^= r
+
+print(bytes(a).decode('utf-8'))
         </code></pre>
       </h2>
     </div>
