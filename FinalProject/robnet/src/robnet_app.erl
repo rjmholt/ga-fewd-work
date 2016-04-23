@@ -8,7 +8,7 @@ start(_Type, _Args) ->
     Paths =
     [
      {"/", cowboy_static, {priv_file, robnet, "assets/index.html"}},
-     {"/[...]", cowboy_static, {priv_dir, robnet, "assets"}}
+     {"/pages/[...]", cowboy_static, {priv_dir, robnet, "assets"}}
     ],
     Dispatch = cowboy_router:compile([
         {'_', Paths}

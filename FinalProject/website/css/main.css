@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: 'Lato', helvetica, sans-serif;
+}
+
+/* ---- Nav Menu CSS ---- */
+#navMenu {
+  float: left;
+  margin: 0 10% 0 10%;
+}
+
+#navMenu li {
+  list-style-type: none;
+}
+
+#navMenu li~li {
+  margin-top: 10px;
+}
+
+#navMenu a {
+  font-weight: 800;
+  text-decoration: underline;
+  color: #000;
+}
+
+/* Set the current page as italic in the nav menu */
+#index .index a {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  font-style: italic;
+}
+
+#aboutMe .aboutMe a {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  font-style: italic;
+}
+
+#contact .contact a {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  font-style: italic;
+}
+
+#posts .posts a {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  font-style: italic;
+}
+
+#demos .demos a {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  font-style: italic;
+}
+/* ---- End Nav Menu CSS ---- */
+
+pre {
+    display: table;
+    margin: 0 auto;
+}
+
+pre code {
+  font-family: 'Ubuntu Mono', Consolas, monospace;
+}

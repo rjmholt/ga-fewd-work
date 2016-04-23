@@ -1,44 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/highlight/zenburn.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js">
-  </script> 
-  <script>
-    $(function() {
-      $('#navMenu').load('nav.html');
-    });
-  </script>
+  <meta charset='UTF-8'>
+  <link rel='stylesheet' href='/pages/css/main.css'>
+  <link rel="stylesheet" href="/pages/css/contact.css">
+  <link rel='stylesheet' href='/pages/css/prism.css'>
   <title>Contact Me</title>
 </head>
-<body id="contact">
+<body id='contact'>
   <header>
     <h1>Contact Me</h1>
   </header>
-  <div id="navMenu"></div>
+  <div id='navMenu'></div>
   <main>
-    <div id="contactCode">
-      <h2>
-        <pre><code class="python3">
-from base64 import b64decode
+    <p>
+      To prevent automated programs from cataloguing my contact details,
+      they are instead stored in programs. Executing any of them will produce
+      my details.
+    </p>
+    <div id='contactCode'>
+      <h2>Python</h2>
+      <pre><code class='language-python'>
+        from base64 import b64decode
 
-x = b64decode(b'O1E8VDtXI2MEaQhhDSNAL0I=')
-k = 0x49
-a = []
-for b in x:
-    r = b ^ k
-    a.append(r)
-    k ^= r
+        x = b64decode(b'O1E8VDtXI2MEaQhhDSNAL0I=')
+        k = 0x49
+        a = []
+        for b in x:
+            r = b ^ k
+            a.append(r)
+            k ^= r
 
-print(bytes(a).decode('utf-8'))
-        </code></pre>
-      </h2>
+        print(bytes(a).decode('utf-8'))
+      </code></pre>
     </div>
-    <div id="socialMediaContact"></div>
+    <div id='socialMediaContact'></div>
   </main>
-  <script src="js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js'>
+  </script> 
+  <script>
+    $(function() {
+      $('#navMenu').load('/pages/nav.html');
+    });
+  </script>
+  <script src='/pages/js/prism.js'></script>
 </body>
 </html>

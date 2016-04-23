@@ -12,3 +12,6 @@ e (c:cs) = do
   ks <- e cs
   return (k:ks)
 
+f l = evalState l iv
+
+main = print $ f s
