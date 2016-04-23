@@ -1,17 +1,12 @@
 import Data.Char
 import Data.Bits
-import Control.Monad.State.Lazy
 
-s = "rjmholt@gmail.com"
-iv = 0x21817
+o = 0x49
+b = [59,81,60,84,59,87,35,99,4,105,8,97,13,35,64,47,66]
 
-e (c:cs) = do
-  k <- get
-  let k' = k `xor` c
-  put k'
-  ks <- e cs
-  return (k:ks)
+r _ []     = []
+r k (c:cs) =
+  let v = xor k c in
+  (chr v) : r (k `xor` v) cs
 
-f l = evalState l iv
-
-main = print $ f s
+main = print $ r o b

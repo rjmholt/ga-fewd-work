@@ -3,8 +3,16 @@ header {
 }
 
 main {
-  margin: 0 auto;
-  width: 40%;
+  margin: 0 15% 0 auto;
+  width: 50%;
+  max-width: 600px;
+  float: left;
+}
+
+#rightBuffer {
+  min-width: 15%;
+  width: auto;
+  float: left;
 }
 
 pre {
