@@ -7,10 +7,22 @@ body {
   font-family: 'Lato', helvetica, sans-serif;
 }
 
+a {
+  font-weight: 800;
+  text-decoration: underline;
+  color: #000;
+}
+
+a:hover {
+  color: #555;
+}
+
+
 /* ---- Nav Menu CSS ---- */
 #navMenu {
   float: left;
   margin: 0 10% 0 10%;
+  position: fixed;
 }
 
 #navMenu li {
@@ -19,16 +31,6 @@ body {
 
 #navMenu li~li {
   margin-top: 10px;
-}
-
-#navMenu a {
-  font-weight: 800;
-  text-decoration: underline;
-  color: #000;
-}
-
-#navMenu a:hover {
-  color: #999;
 }
 
 /* Set the current page as italic in the nav menu */

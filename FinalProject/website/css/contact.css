@@ -9,6 +9,13 @@ main {
   float: left;
 }
 
+#leftBuffer {
+  min-width: 20%;
+  width: 30%;
+  height: 1000px;
+  float: left;
+}
+
 #rightBuffer {
   min-width: 15%;
   width: auto;
