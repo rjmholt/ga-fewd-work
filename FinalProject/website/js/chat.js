@@ -9,8 +9,6 @@ function connect (username)
     var wsHost = 'ws://' + window.location.host + '/websocket';
     webSocket  = new WebSocket(wsHost);
 
-    printMessage('Connecting to ' + wsHost);
-
     webSocket.onopen    = function (e) { onOpen(e); };
     webSocket.onclose   = function (e) { onClose(e); };
     webSocket.onmessage = function (e) { onMessage(e); };
@@ -77,6 +75,8 @@ $(document).ready(function () {
         if (e.keyCode == RETURN) {
             username = $('#username').val();
             connect();
+            $('#username').hide();
+            $('#chatEntry').show();
         }
     });
 

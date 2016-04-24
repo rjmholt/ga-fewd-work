@@ -84,3 +84,7 @@ pre {
 pre code {
   font-family: 'Ubuntu Mono', Consolas, monospace;
 }
+
+.hide {
+  display: none;
+}

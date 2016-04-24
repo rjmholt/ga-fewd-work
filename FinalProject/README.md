@@ -29,7 +29,8 @@ for things like CSS and loading the `nav` menu.
 Why are you using a webserver? That's overkill
 ----------------------------------------------
 
-No particular reason is great, but there are a few:
+There are a couple of reasons. No particular one is compelling, but they
+sort of added up:
 
 * I've never used a webserver before -- I wanted to try it out
 * It's convenient for structuring the page paths
