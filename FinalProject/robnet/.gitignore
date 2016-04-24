@@ -1,3 +1,6 @@
 _rel/*
 relx
 deps
+.erlang.mk
+ebin
+robnet.d
