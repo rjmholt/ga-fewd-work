@@ -2,33 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Posts</title>
   <link rel="stylesheet" href="/pages/css/main.css">
   <link rel="stylesheet" href="/pages/css/posts.css">
+  <title>Writing a Simple Web Chat App</title>
 </head>
-<body id="posts">
+<body>
   <div id="navMenu"></div>
   <div id="leftBuffer"></div>
-  <header>
-    <h1>Posts</h1>
-  </header>
+  <header><h1>Writing a Simple Web Chat App</h1></header>
   <main>
-    <p>Posts are here</p>
-    <ul>
-      <li>
-        <a href="/pages/posts/chat-demo.html">
-          Writing a Simple Web Chat App &mdash; Demo
-        </a>
-      </li>
-    </ul>
+    <div id="chatBox">
+      <div id="output"></div>
+      <input id="username" type="text" placeholder="Enter a name...">
+      <textarea id="chatEntry" cols="30" rows="2"></textarea>
+    </div>
   </main>
-  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js">
   </script> 
   <script>
     $(function() {
-      $('#navMenu').load('/pages/nav.html');
+      $("#navMenu").load("/pages/nav.html");
     });
   </script>
+  <script src="/pages/js/chat.js"></script>
 </body>
 </html>
