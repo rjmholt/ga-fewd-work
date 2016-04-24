@@ -5,6 +5,7 @@
 -export([stop/1]).
 
 start(_Type, _Args) ->
+    webchat_server:start_link(),
     Paths =
     [
      {"/", cowboy_static, {priv_file, robnet, "assets/index.html"}},

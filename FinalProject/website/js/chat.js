@@ -76,7 +76,6 @@ $(document).ready(function () {
     $('#username').keydown(function (e) {
         if (e.keyCode == RETURN) {
             username = $('#username').val();
-            alert(username);
             connect();
         }
     });
@@ -84,6 +83,7 @@ $(document).ready(function () {
     $('#chatEntry').keydown(function (e) {
         if (e.keyCode == RETURN) {
             sendMsg(username, $('#chatEntry').val());
+            $('#chatEntry').val('');
         }
     });
 });
