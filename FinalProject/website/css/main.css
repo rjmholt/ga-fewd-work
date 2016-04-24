@@ -19,8 +19,14 @@ a:hover {
 
 
 /* ---- Nav Menu CSS ---- */
-#navMenu {
+#leftBuffer {
+  min-width: 20%;
+  width: 30%;
+  height: 400px;
   float: left;
+}
+
+#navMenu {
   margin: 0 10% 0 10%;
   position: fixed;
 }

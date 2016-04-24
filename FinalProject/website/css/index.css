@@ -35,7 +35,7 @@
 }
 
 #pageHead {
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   min-height: 100px;
   text-align: center;
 }
@@ -43,4 +43,19 @@
 #pageBody {
   margin: auto 0;
   width: 70%;
+}
+
+#navMenu {
+  position: static;
+  height: auto;
+  float: left;
+  margin-top: -5%;
+}
+
+#mainContainer {
+  float: left;
+  min-height: 500px;
+  width: 40%;
+  margin-left: 20%;
+  margin-top: 5%;
 }

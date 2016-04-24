@@ -1,4 +1,5 @@
 header {
+  margin-top: 50px;
   margin-left: 10%;
 }
 
@@ -6,13 +7,6 @@ main {
   margin: 0 15% 0 auto;
   width: 50%;
   max-width: 600px;
-  float: left;
-}
-
-#leftBuffer {
-  min-width: 20%;
-  width: 30%;
-  height: 1000px;
   float: left;
 }
 
