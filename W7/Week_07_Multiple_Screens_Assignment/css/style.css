@@ -58,6 +58,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #fff;
+}
+
 
 /******************************************
 /* LAYOUT
@@ -179,13 +183,13 @@ blockquote span {
   margin-top: 80px;
 }
 #posts {
-  width: 700px;
+  width: 70%;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 5%;
   vertical-align: top;
 }
 #sidebar {
-  width: 240px;
+  width: 25%;
   display: inline-block;
   vertical-align: top;
 }
@@ -206,6 +210,7 @@ blockquote span {
 
 .post img {
   margin-bottom: 30px;
+  width: 100%;
 }
 .post p {
   font-size: 24px;
@@ -228,6 +233,10 @@ blockquote span {
 .readmore a {
   color: #043049;
   font-weight: 600;
+}
+
+.readmore a:hover {
+  color: #002;
 }
 
 /*.button {
@@ -272,6 +281,9 @@ blockquote span {
   color: #043049;
   font-weight: 600;
 }
+#sidebar a:hover {
+  color: #002;
+}
 
 #bottom-cta {
   background: #f9e42e;
@@ -302,7 +314,7 @@ footer p {
 @media (max-width: 786px) {
   header .container {
     text-align: center;
-    padding-bottom: 5%;
+    padding-bottom: 20px;
   }
 
   header .container h1 {
@@ -318,7 +330,7 @@ footer p {
   header .container nav ul li {
     display: list-item;
     font-weight: 800;
-    margin: 0 auto;
+    margin: 10px auto;
     width: 100%;
   }
 
@@ -353,6 +365,21 @@ footer p {
   #testimonial {
     background-size: auto 100%;
     font-size: 0.8em;
+  }
+
+  #posts {
+    width: 100%;
+  }
+
+  #sidebar {
+    text-align: center;
+    width: 100%;
+  }
+
+  #sidebar p {
+    width: 60%;
+    text-align: left;
+    margin: 20px auto 50px auto;
   }
 }
 
