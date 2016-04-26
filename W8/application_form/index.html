@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Course Application</title>
+</head>
+<body>
+  <form action="">
+    <h2>Your Contact Info</h2>
+    <div id="ContactInfo">
+      <div id="NameEntry">
+        <span class="formEntry">Your Name</span>
+        <input id="FirstName" type="text" name="">
+        <input id="LastName" type="text" name="">
+      </div>
+      <div id="Number">
+        <span class="formEntry">Phone Number</span>
+        <input id="PhoneNumber" type="text" name="">
+      </div>
+      <div id="Address">
+        <span class="formEntry">Address</span>
+        <input id="StreetAddr" type="text" name="">
+        <input id="AddrLine2" type="text" name="">
+        <input id="City" type="text" name="">
+        <input id="State" type="text" name="">
+        <input id="PostCode" type="text" name="">
+      </div>
+    </div>
+    <h2>Skills &amp; Interests</h2>
+    <div id="SkillsInterests">
+      <div id="Course">
+        <span class="formEntry">Course</span>
+        <select id="CourseSelect" name="">
+          <option value="" disabled selected>Select One</option>
+          <optgroup label="Web Development">
+            <option value="frontEnd">Front-End</option>
+            <option value="backEnd">Back-End</option>
+          </optgroup>
+          <optgroup label="Design">
+            <option value="visualDesign">Visual Design</option>
+            <option value="userExperience">User Experience</option>
+          </optgroup>
+        </select>
+      </div>
+      <div id="Experience">
+        <span class="formEntry">Past Experience</span>
+        <textarea id="PastExperience" name="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+    <h2>Anything Else?</h2>
+    <div id="AnythingElse">
+      <div id="Refer">
+        <span class="formEntry">Referral</span>
+        <select id="ReferralSelect" name="">
+          <option value="none">None</option>
+          <option value="friend">Friend</option>
+          <option value="instructor">Instructor</option>
+          <option value="online">Online</option>
+        </select>
+      </div>
+      <div id="Comments">
+        <span class="formEntry">Comments</span>
+        <textarea id="CommentText" name="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+    <input type="submit" value="Save Draft">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
