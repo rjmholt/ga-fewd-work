@@ -5,4 +5,11 @@ body {
 
 select, input, textarea {
   background: #ffffcc;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+label {
+  min-width: 150px;
+  display: inline-block;
 }
