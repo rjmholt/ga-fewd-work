@@ -18,13 +18,16 @@ following command :
 
 You can then access the website at `localhost:8080`, and navigate from there.
 
-If you would rather not run the website off the webserver, go into the
-`website` directory and run:
+Currently, the paths should work both with the webserver and from the
+file system. If you don't have Erlang and the file system approach doesn't
+work, try:
 
-    find . -type f -exec sed -i 's|/pages/||g' {} +
+    python -m SimpleHTTPServer 8080
 
-You should then be able to open the html files directly, and links will work
-for things like CSS and loading the `nav` menu.
+And access at the `localhost:8080`.
+
+Currently, without a webserver, the nav paths are broken because they must
+be relative, but are imported into different levels of the filesystem.
 
 Why are you using a webserver? That's overkill
 ----------------------------------------------
