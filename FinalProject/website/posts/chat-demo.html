@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/posts.css">
+  <link rel="stylesheet" href="../css/chat.css">
   <title>Writing a Simple Web Chat App</title>
 </head>
 <body>
@@ -12,9 +12,17 @@
   <header><h1>Writing a Simple Web Chat App</h1></header>
   <main>
     <div id="chatBox">
-      <div id="output"></div>
-      <input id="username" type="text" placeholder="Enter a name...">
-      <textarea id="chatEntry" class="hide" cols="30" rows="2"></textarea>
+      <div id="chatInit">
+        <h2>Enter a name to use in chat:</h2>
+        <input id="username" type="text" class="chatElement" placeholder="Enter a name...">
+      </div>
+      <div id="chatOut" class="hide">
+        <div id="connectionMessage">
+          <h2></h2>
+        </div>
+        <div id="output" class="chatElement"></div>
+        <input id="chatEntry" class="chatElement" type="text">
+      </div>
     </div>
   </main>
 

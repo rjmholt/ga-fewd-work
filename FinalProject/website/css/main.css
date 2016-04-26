@@ -17,6 +17,16 @@ a:hover {
   color: #555;
 }
 
+header {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+main {
+  width: 40%;
+  margin: 0 auto;
+}
+
 
 /* ---- Nav Menu CSS ---- */
 #leftBuffer {

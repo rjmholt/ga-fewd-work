@@ -17,12 +17,12 @@ function connect (username)
 
 function onOpen (e)
 {
-    printMessage('<span style="color: green";>CONNECTED</span>');
+    statusMessage('<span style="color: green;">Connected</span>');
 }
 
 function onClose (e)
 {
-    printMessage('<span style="color: green;">DISCONNECTED</span>');
+    statusMessage('<span style="color: green;">Disconnected</span>');
 }
 
 function onMessage (e)
@@ -38,7 +38,7 @@ function onMessage (e)
 
 function onError (e)
 {
-    printMessage('<span style="color: red;">ERROR: ' + e.data + '</span>');
+    statusMessage('<span style="color: red;">ERROR: ' + e.data + '</span>');
 }
 
 function sendMsg (username, text)
@@ -58,6 +58,12 @@ function printMessage (text)
     $('#output').append(text + '<br/>');
 }
 
+function statusMessage (msg)
+{
+    $('#connectionMessage h2').html(msg);
+    $('#connectionMessage h2').show().fadeOut(5000);
+}
+
 function utf8Encode (data)
 {
     return unescape(encodeURIComponent(data));
@@ -75,8 +81,8 @@ $(document).ready(function () {
         if (e.keyCode == RETURN) {
             username = $('#username').val();
             connect();
-            $('#username').hide();
-            $('#chatEntry').show();
+            $('#chatInit').hide();
+            $('#chatOut').show();
         }
     });
 
@@ -84,6 +90,8 @@ $(document).ready(function () {
         if (e.keyCode == RETURN) {
             sendMsg(username, $('#chatEntry').val());
             $('#chatEntry').val('');
+            // Stop <RETURN> from making a new line
+            return false;
         }
     });
 });
