@@ -8,6 +8,7 @@
 
 input {
   display: block;
+  margin: 20px auto;
 }
 
 #connectionMessage {
@@ -18,4 +19,5 @@ input {
   margin-bottom: 20px;
   height: 300px;
   background-color: #eee;
+  overflow: auto;
 }

@@ -56,6 +56,9 @@ function sendMsg (username, text)
 function printMessage (text)
 {
     $('#output').append(text + '<br/>');
+    setTimeout(function () {
+        $('#output').scrollTop = $('#output').scrollHeight;
+    }, 1);
 }
 
 function statusMessage (msg)

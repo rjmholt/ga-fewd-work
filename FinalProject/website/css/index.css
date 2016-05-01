@@ -1,11 +1,6 @@
-header {
-  margin-top: 0;
-  text-align: center;
-}
-
 #banner {
+  height: 300px;
   width: 100%;
-  height: 400px;
   background-image: url(../img/perfect_mountains.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -15,15 +10,11 @@ header {
   -o-background-size: cover;
   background-size: cover;
   z-index: -1;
-  margin-bottom: -30%;
-}
-
-#titlePic {
-  margin: 0 auto 0 auto;
 }
 
 #personalPic {
-  margin: 25% auto 0 auto;
+  margin: 0 auto;
+  margin-top: -50px;
   width: 100px;
   height: 100px;
   background: #fff;
@@ -35,32 +26,17 @@ header {
   background-size: contain;
 }
 
-#personalPic img {
+header {
   width: 100%;
-}
-
-#pageHead {
-  margin: 0 auto;
-  min-height: 100px;
   text-align: center;
+  margin: 0 auto;
 }
 
-#pageBody {
-  margin: auto 0;
-  width: 70%;
+#leftBuffer {
+  display: none;
 }
 
 #navMenu {
   position: static;
-  height: auto;
   float: left;
-  margin-top: -5%;
-}
-
-#leftBuffer {
-  width: 10%;
-}
-
-main {
-  width: 60%;
 }
