@@ -32,11 +32,18 @@ header {
   margin: 0 auto;
 }
 
-#leftBuffer {
-  display: none;
-}
-
 #navMenu {
   position: static;
   float: left;
+}
+
+main {
+  min-height: 300px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #navMenu {
+    margin-top: 50px;
+    float: none;
+  }
 }

@@ -101,7 +101,41 @@ pre code {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    width: 80%;
+  }
+
+  #navMenu {
+    position: static;
+    width: 80%;
+    margin: 20px auto 50px auto;
+  }
+
+  #navMenu ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  #navMenu li {
+    display: inline-block;
+  }
+
+  #navMenu li~li {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  #leftBuffer {
+    display: none;
+  }
+
+  main {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   header {
     width: 100%;
     text-align: center;
