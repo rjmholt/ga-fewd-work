@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+}
+
+main {
+  margin-left: 30px;
+}
+
+.formItem {
+  margin: 40px auto;
+}
+
+label {
+  display: block;
+  width: 250px;
+  float: left;
+  color: #666;
+  margin-right: 150px;
+}
+
+#interestsLabel, #radioInterests {
+  height: 100px;
+}
+
+#termsLabel, li label {
+  display: inline;
+  float: none;
+  margin-right: 20px;
+}
+
+#radioInterests ul li {
+  display: inline;
+}
+
+input[type=text], input[type=password], select {
+  width: 300px;
+}
+
+input[type=text], input[type=password] {
+  border: none;
+  border-bottom: 1px solid #000;
+}

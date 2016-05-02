@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relaxr Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <main>
+    <h2>Register Now!</h2>
+    <form>
+      <div class="formItem">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name">
+      </div>
+      <div class="formItem">
+        <label for="email">Email</label>
+        <input id="email" type="text" name="email">
+      </div>
+      <div class="formItem">
+        <label for="phone">Phone</label>
+        <input id="phone" type="text" name="phone">
+      </div>
+      <div class="formItem">
+        <label for="state">State</label>
+        <select id="state" name="state">
+          <option value="default" selected disabled>Select your state...</option>
+          <option value="nsw">NSW</option>
+          <option value="vic">VIC</option>
+          <option value="qld">QLD</option>
+          <option value="tas">TAS</option>
+          <option value="sa">SA</option>
+          <option value="wa">WA</option>
+          <option value="act">ACT</option>
+          <option value="nt">NT</option>
+        </select>
+      </div>
+      <div class="formItem">
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password">
+      </div>
+      <div class="formItem">
+        <label id="interestsLabel" for="radioInterests">
+          Which service are you interested in?
+        </label>
+        <div id="radioInterests">
+          <ul>
+            <li>
+              <input id="radioRelaxing" type="radio" name="interests">
+              <label for="radioRelaxing">Relaxing</label>
+            </li>
+            <li>
+              <input id="radioEmail" type="radio" name="interests">
+              <label for="radioEmail">Email</label>
+            </li>
+            <li>
+              <input id="radioPhone" type="radio" name="interests">
+              <label for="radioPhone">Phone</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="formItem">
+        <input id="terms" type="checkbox" name="terms">
+        <label id="termsLabel" for="terms">I agree to the terms</label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+</body>
+</html>
