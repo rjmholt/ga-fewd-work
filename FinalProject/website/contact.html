@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='css/main.css'>
   <link rel="stylesheet" href="css/contact.css">
-  <link rel='stylesheet' href='css/prism.css'>
+  <!--<link rel='stylesheet' href='css/prism.css'>-->
+  <link rel="stylesheet" href="css/highlight.css">
   <title>Contact Me</title>
 </head>
 <body id='contact'>
@@ -20,37 +21,40 @@
     </p>
     <div id='contactCode'>
       <h2>Python</h2>
-      <pre><code class='language-python'>
-        from base64 import b64decode
+      <div class="codeBlock">
+        <pre><code class='language-python'>
+<span class="keyword">from</span> <span class="package">base64</span> <span class="keyword">import</span> <span class="package">b64decode</span>
+<span class="identifier">x</span> = <span class="func">b64decode</span>(<span class="string">b'O1E8VDtXI2MEaQhhDSNAL0I='</span>)
+<span class="identifier">k</span> = <span class="literal">0x49</span>
+<span class="identifier">a</span> = []
+<span class="keyword">for</span> <span class="identifier">b</span> <span class="keyword">in</span> <span class="identifier">x</span>:
+    <span class="identifier">r</span> = <span class="identifier">b</span> ^ <span class="identifier">k</span>
+    <span class="identifier">a</span>.<span class="func">append</span>(<span class="identifier">r</span>)
+    <span class="identifier">k</span> ^= <span class="identifier">r</span>
 
-        x = b64decode(b'O1E8VDtXI2MEaQhhDSNAL0I=')
-        k = 0x49
-        a = []
-        for b in x:
-            r = b ^ k
-            a.append(r)
-            k ^= r
-
-        print(bytes(a).decode('utf-8'))
-      </code></pre>
+<span class="builtin">print</span>(<span class="builtin">bytes</span>(<span
+    class="identifier">a</span>).<span class="func">decode</span>(<span class="string">'utf-8'</span>))
+        </code></pre>
+      </div>
       <h2>
         Haskell
       </h2>
-      <pre><code class="language-haskell">
-        import Data.Char
-        import Data.Bits
+      <div class="codeBlock">
+        <pre><code class="language-haskell">
+<span class="keyword">import</span> <span class="package">Data.Char</span>
+<span class="keyword">import</span> <span class="package">Data.Bits</span>
 
-        o = 0x49
-        b = [59,81,60,84,59,87,35,99,4,105,8,97,13,35,64,47,66]
+<span class="identifier">o</span> = <span class="literal">0x49</span>
+<span class="identifier">b</span> = [<span class="literal">59</span>,<span class="literal">81</span>,<span class="literal">60</span>,<span class="literal">84</span>,<span class="literal">59</span>,<span class="literal">87</span>,<span class="literal">35</span>,<span class="literal">99</span>,<span class="literal">4</span>,<span class="literal">105</span>,<span class="literal">8</span>,<span class="literal">97</span>,<span class="literal">13</span>,<span class="literal">35</span>,<span class="literal">64</span>,<span class="literal">47</span>,<span class="literal">66</span>]
 
-        r _ []     = []
-        r k (x:xs) =
-          let v = xor k x in
-          (chr v) : r (k `xor` v) xs
+<span class="identifier">r</span> _ []     = []
+<span class="identifier">r</span> <span class="identifier">k</span> (<span class="identifier">x</span>:<span class="identifier">xs</span>) =
+  <span class="keyword">let</span> <span class="identifier">v</span> = <span class="identifier">xor</span> <span class="identifier">k</span> <span class="identifier">x</span> <span class="keyword">in</span>
+  (<span class="identifier">chr</span> <span class="identifier">v</span>) : <span class="identifier">r</span> (<span class="identifier">k</span> <span class="infix">`xor`</span> <span class="identifier">v</span>) <span class="identifier">xs</span>
 
-        main = print $ r o b
-      </code></pre>
-    </div>
+<span class="identifier">main</span> = <span class="identifier">print</span> <span class="keyword">$</span> <span class="identifier">r</span> <span class="identifier">o</span> <span class="identifier">b</span>
+        </code></pre>
+      </div>
     <div id='socialMediaContact'></div>
   </main>
   <div id="rightBuffer"></div>
@@ -58,6 +62,6 @@
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js'>
   </script> 
   <script src='js/nav.js'></script>
-  <script src='js/prism.js'></script>
+  <!--<script src='js/prism.js'></script>-->
 </body>
 </html>

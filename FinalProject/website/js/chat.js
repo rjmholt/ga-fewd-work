@@ -81,8 +81,8 @@ $(document).ready(function () {
     var username;
 
     $('#username').keydown(function (e) {
-        if (e.keyCode == RETURN) {
-            username = $('#username').val();
+        username = $('#username').val();
+        if (e.keyCode == RETURN && username !== '') {
             connect();
             $('#chatInit').hide();
             $('#chatOut').show();
@@ -91,8 +91,11 @@ $(document).ready(function () {
 
     $('#chatEntry').keydown(function (e) {
         if (e.keyCode == RETURN) {
-            sendMsg(username, $('#chatEntry').val());
-            $('#chatEntry').val('');
+            var content = $('#chatEntry').val();
+            if (content !== '') {
+                sendMsg(username, content);
+                $('#chatEntry').val('');
+            }
             // Stop <RETURN> from making a new line
             return false;
         }
