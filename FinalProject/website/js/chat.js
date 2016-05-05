@@ -4,6 +4,8 @@ var RETURN = 13;
 // The websocket reference, which must be passed around
 var webSocket;
 
+var clientState = { username: null, peers: [] };
+
 function connect (username)
 {
     var wsHost = 'ws://' + window.location.host + '/websocket';
@@ -17,12 +19,11 @@ function connect (username)
 
 function onOpen (e)
 {
-    statusMessage('<span style="color: green;">Connected</span>');
 }
 
 function onClose (e)
 {
-    statusMessage('<span style="color: green;">Disconnected</span>');
+    statusMessage('green', 'Disconnected');
 }
 
 function onMessage (e)
@@ -33,24 +34,59 @@ function onMessage (e)
         case 'message':
             printMessage(msg.identity + ': ' + msg.message);
             break;
+        case 'newid':
+            if (clientState.username === msg.identity) {
+                statusMessage('green', 'Connected'); 
+            }
+            else if (msg.former === '') {
+                statusMessage('gray', 'New Connection: ' + msg.identity);
+            }
+            break;
+        case 'peerlist':
+            $('#peers').html('');
+            msg.peers.forEach(function (peer, i, arr) {
+                $('#peers').append(peer + '<br/>');
+            });
+            break;
     }
 }
 
 function onError (e)
 {
-    statusMessage('<span style="color: red;">ERROR: ' + e.data + '</span>');
+    statusMessage('red', 'ERROR: ' + e.data);
+}
+
+function chatSend (msgObject)
+{
+    var chatSendTry = function(msgObject, tryNum) {
+        if (tryNum > 10) {
+            printMessage('Web Socket not ready to send');
+            return;
+        }
+
+        setTimeout(function () {
+            if (webSocket.readyState == webSocket.OPEN) {
+            webSocket.send(JSON.stringify(msgObject));
+            }
+            else {
+                chatSendTry(msgObject, tryNum+1);
+            }
+        }, 50);
+    };
+
+    chatSendTry(msgObject, 0);
 }
 
 function sendMsg (username, text)
 {
-    if (webSocket.readyState == webSocket.OPEN) {
-        var msg = { 'type': 'message', 'identity': username, 'message': text };
-        webSocket.send(JSON.stringify(msg));
-    }
-    else {
-        printMessage('Web Socket not connected');
-    }
-    
+    var msg = { type: 'message', identity: username, message: text };
+    chatSend(msg);
+}
+
+function sendConnect (username)
+{
+    var msg = { type: 'changeid', newid: username, oldid: '' };
+    chatSend(msg);
 }
 
 function printMessage (text)
@@ -61,9 +97,10 @@ function printMessage (text)
     }, 1);
 }
 
-function statusMessage (msg)
+function statusMessage (colour, msg)
 {
-    $('#connectionMessage h2').html(msg);
+    var text = '<span style="color: '+colour+';">'+msg+'</span>';
+    $('#connectionMessage h2').html(text);
     $('#connectionMessage h2').show().fadeOut(5000);
 }
 
@@ -78,14 +115,14 @@ function utf8Decode (data)
 }
 
 $(document).ready(function () {
-    var username;
-
     $('#username').keydown(function (e) {
-        username = $('#username').val();
-        if (e.keyCode == RETURN && username !== '') {
+        clientState.username = $('#username').val();
+        if (e.keyCode == RETURN && clientState.username !== '') {
             connect();
             $('#chatInit').hide();
             $('#chatOut').show();
+            $('#peerBox').show();
+            sendConnect(clientState.username);
         }
     });
 
@@ -93,7 +130,7 @@ $(document).ready(function () {
         if (e.keyCode == RETURN) {
             var content = $('#chatEntry').val();
             if (content !== '') {
-                sendMsg(username, content);
+                sendMsg(clientState.username, content);
                 $('#chatEntry').val('');
             }
             // Stop <RETURN> from making a new line

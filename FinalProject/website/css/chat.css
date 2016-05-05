@@ -14,13 +14,18 @@
   margin: 0 auto;
 }
 
+#peers {
+  background-color: #eee;
+  min-height: 100px;
+}
+
 input {
   display: block;
   margin: 20px auto;
 }
 
 #connectionMessage {
-  height: 50px;
+  height: 75px;
   margin: 0 auto;
 }
 
