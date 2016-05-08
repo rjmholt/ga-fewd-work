@@ -57,6 +57,32 @@ main {
   display: block;
 }
 
+@-o-keyframes wiggle {
+  0% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  } 
+
+  100% {
+    transform: rotate(3deg);
+  }
+}
+@-moz-keyframes wiggle {
+  0% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  } 
+
+  100% {
+    transform: rotate(3deg);
+  }
+}
 @-webkit-keyframes wiggle {
   0% {
     transform: rotate(3deg);
@@ -85,8 +111,10 @@ main {
 }
 
 #navMenu a:hover {
-  animation: wiggle .1s 2;
+  -o-animation: wiggle .1s 2;
+  -moz-animation: wiggle .1s 2;
   -webkit-animation: wiggle .1s 2;
+  animation: wiggle .1s 2;
 }
 
 /* Set the current page as italic in the nav menu */
