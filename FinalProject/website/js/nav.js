@@ -3,7 +3,6 @@
 
 // Nasty hack to normalise the nav links without absolute paths
 // in case there is no webserver
-
 var relPath = '';
 var pathSplit = window.location.href.split('/');
 if (pathSplit.includes('posts')) {

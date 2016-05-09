@@ -6,6 +6,7 @@ var webSocket;
 
 var clientState = { username: null, peers: [] };
 
+// Connect the client to the webhost and set up the websocket methods
 function connect (username)
 {
     var wsHost = 'ws://' + window.location.host + '/websocket';
@@ -17,23 +18,30 @@ function connect (username)
     webSocket.onerror   = function (e) { onError(e); };
 }
 
+// No actions to take immediately on opening
 function onOpen (e)
 {
 }
 
+// When the socket closes, print a nice message
 function onClose (e)
 {
     statusMessage('green', 'Disconnected');
 }
 
+// Message receiving method
 function onMessage (e)
 {
+    // Decode the incoming message
     var msg = JSON.parse(e.data);
 
     switch (msg.type) {
+        // Ordinary messages can just be displayed to the user
         case 'message':
             printMessage(msg.identity + ': ' + msg.message);
             break;
+        // NewID messages say that someone has connected or changed name
+        // (the second is not implemented yet)
         case 'newid':
             if (clientState.username === msg.identity) {
                 statusMessage('green', 'Connected'); 
@@ -42,6 +50,7 @@ function onMessage (e)
                 statusMessage('gray', 'New Connection: ' + msg.identity);
             }
             break;
+        // PeerList tells clients who is connected
         case 'peerlist':
             $('#peers').html('');
             msg.peers.forEach(function (peer, i, arr) {
@@ -51,11 +60,14 @@ function onMessage (e)
     }
 }
 
+// Tell the user when there is an error
 function onError (e)
 {
     statusMessage('red', 'ERROR: ' + e.data);
 }
 
+// Message sending function that retries 10 times at intervals
+// then gives up and prints a message saying it did
 function chatSend (msgObject)
 {
     var chatSendTry = function(msgObject, tryNum) {
@@ -77,18 +89,21 @@ function chatSend (msgObject)
     chatSendTry(msgObject, 0);
 }
 
+// Send a (chat) 'message' type message
 function sendMsg (username, text)
 {
     var msg = { type: 'message', identity: username, message: text };
     chatSend(msg);
 }
 
+// Send a connection message to the server with a chosen username
 function sendConnect (username)
 {
     var msg = { type: 'changeid', newid: username, oldid: '' };
     chatSend(msg);
 }
 
+// Print a message to the user's interface
 function printMessage (text)
 {
     $('#output').append(text + '<br/>');
@@ -97,6 +112,7 @@ function printMessage (text)
     }, 1);
 }
 
+// Print a status message to the user's window
 function statusMessage (colour, msg)
 {
     var text = '<span style="color: '+colour+';">'+msg+'</span>';
@@ -104,17 +120,21 @@ function statusMessage (colour, msg)
     $('#connectionMessage h2').show().fadeOut(5000);
 }
 
+// A strange JS way of ensuring data is UTF-8 encoded
 function utf8Encode (data)
 {
     return unescape(encodeURIComponent(data));
 }
 
+// A strange JS way of decoding from UTF-8
 function utf8Decode (data)
 {
     return decodeURIComponent(escape(data));
 }
 
 $(document).ready(function () {
+    // Let the user enter their username. When they press enter, send
+    // the appropriate message and show the chat window
     $('#username').keydown(function (e) {
         clientState.username = $('#username').val();
         if (e.keyCode == RETURN && clientState.username !== '') {
@@ -126,6 +146,7 @@ $(document).ready(function () {
         }
     });
 
+    // Let the user enter chat messages and send when they press <RETURN>
     $('#chatEntry').keydown(function (e) {
         if (e.keyCode == RETURN) {
             var content = $('#chatEntry').val();
