@@ -19,6 +19,11 @@ function getPathToRoot() {
 
 // Generate the nav element for a page given the path to the webroot
 function generateNav(rootPath) {
+    // Sanitise rootPath
+    if (rootPath === undefined || rootPath === null) {
+        rootPath = '';
+    }
+
     // Can no longer import an HTML as the relative rootPath must be
     // injected into the nav html
     var navStr =
