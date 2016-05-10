@@ -5,14 +5,14 @@ body {
   width: 100%;
   margin: 0;
   font-family: 'Lato', helvetica, sans-serif;
-  color: #222222;
+  color: #333333;
   background-color: #ffffff;
 }
 
 a {
   font-weight: 800;
   text-decoration: underline;
-  color: #000;
+  color: #333333;
 }
 
 a:hover {

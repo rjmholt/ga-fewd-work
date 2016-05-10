@@ -34,6 +34,7 @@ function generateNav(rootPath) {
     return navStr;
 }
 
+// Generate a nav and add it to the page
 function initNav() {
     var rootPath = getPathToRoot();
     var navStr = generateNav(rootPath);
@@ -41,4 +42,7 @@ function initNav() {
     $('#navMenu').html(navStr);
 }
 
+// No document ready here:
+// The nav is supposed to be part of the document,
+// so load it as soon as possible
 initNav();
