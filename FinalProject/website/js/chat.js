@@ -68,6 +68,8 @@ function onError (e)
 
 // Message sending function that retries 10 times at intervals
 // then gives up and prints a message saying it did
+// Based on:
+//   http://stackoverflow.com/questions/13546424/how-to-wait-for-a-websockets-readystate-to-change
 function chatSend (msgObject)
 {
     var chatSendTry = function(msgObject, tryNum) {
